@@ -1,9 +1,4 @@
-use std::intrinsics::atomic_cxchgweak_acquire_seqcst;
-
-use axum::{
-    extract::{self, rejection::MatchedPathRejection},
-    http::{self, status},
-};
+use axum::{extract, http};
 use serde::{Deserialize, Serialize};
 use sqlx::{FromRow, PgPool};
 
